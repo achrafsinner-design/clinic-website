@@ -1,0 +1,283 @@
+---
+interface Props {}
+---
+
+<section id="services" class="py-20 lg:py-32 relative overflow-hidden" aria-labelledby="services-title">
+  <!-- Aurora background -->
+  <div class="absolute inset-0 -z-10 aurora-bg" aria-hidden="true"></div>
+  <div class="absolute inset-0 -z-10 noise opacity-[0.02]" aria-hidden="true"></div>
+
+  <!-- Section header -->
+  <div class="section-container relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal up stagger-1 duration-normal ease-spring">
+      <span class="section-label magnetic" data-magnetic-strength="0.1">Nos Services</span>
+      <h2 id="services-title" class="section-title font-display reveal-text">
+        Expertise dermatologique
+        <br class="hidden sm:block" />
+        <span class="text-gradient">complète</span>
+      </h2>
+      <p class="section-subtitle mx-auto">
+        De la dermatologie médicale à la médecine esthétique, nous proposons une prise en charge personnalisée avec les technologies les plus avancées.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Service 1: Dermatologie Médicale -->
+      <article class="card-interactive group p-8 relative overflow-hidden hover-lift magnetic perspective-reveal" data-magnetic-strength="0.15" data-lift-distance="10">
+        <!-- WebGL preview on hover -->
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+          <img src="/images/medical/medical-1.jpg" alt="Consultation dermatologique" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-pearl-900/90 via-pearl-900/30 to-transparent" aria-hidden="true"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-center text-white">
+            <span class="text-sm font-medium">Dermatologie Médicale</span>
+          </div>
+        </div>
+
+        <div class="relative z-10">
+          <!-- Icon with gradient background -->
+          <div class="icon-box-lg relative mb-6 group-hover:scale-110 transition-transform duration-500 magnetic" data-magnetic-child="0.2" aria-hidden="true">
+            <div class="absolute inset-0 bg-gradient-to-br from-med-500 to-teal-500 rounded-2xl opacity-20 blur-xl transform scale-110"></div>
+            <svg class="w-7 h-7 text-med-600 dark:text-med-400 relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+
+          <h3 class="text-xl font-bold text-pearl-950 dark:text-white mb-3 font-display">Dermatologie Médicale</h3>
+          <p class="text-pearl-600 dark:text-pearl-400 mb-6 leading-relaxed">
+            Diagnostic et traitement des maladies de la peau, des cheveux et des ongles.
+          </p>
+          <ul class="space-y-3 text-sm text-pearl-600 dark:text-pearl-400" role="list">
+            <li class="flex items-center gap-2 reveal up stagger-1 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-med-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Acné, eczéma, psoriasis</li>
+            <li class="flex items-center gap-2 reveal up stagger-2 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-med-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Dermatoscopie & dépistage cancers cutanés</li>
+            <li class="flex items-center gap-2 reveal up stagger-3 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-med-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Maladies des cheveux & ongles</li>
+            <li class="flex items-center gap-2 reveal up stagger-4 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-med-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Allergies cutanées & patch-tests</li>
+          </ul>
+
+          <!-- Hover action -->
+          <div class="mt-6 pt-6 border-t border-white/20 dark:border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+            <a href="#contact" class="text-med-600 dark:text-med-400 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all duration-300">
+              En savoir plus
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Corner accent -->
+        <div class="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-med-500/10 to-teal-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+      </article>
+
+      <!-- Service 2: Médecine Esthétique -->
+      <article class="card-interactive group p-8 relative overflow-hidden hover-lift magnetic perspective-reveal" data-magnetic-strength="0.15" data-lift-distance="10" style="animation-delay: 0.1s">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+          <img src="/images/aesthetic/aesthetic-1.jpg" alt="Médecine esthétique - toxine botulique" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-pearl-900/90 via-pearl-900/30 to-transparent" aria-hidden="true"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-center text-white">
+            <span class="text-sm font-medium">Médecine Esthétique</span>
+          </div>
+        </div>
+
+        <div class="relative z-10">
+          <div class="icon-box-lg relative mb-6 group-hover:scale-110 transition-transform duration-500 magnetic" data-magnetic-child="0.2" aria-hidden="true">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl opacity-20 blur-xl transform scale-110"></div>
+            <svg class="w-7 h-7 text-teal-600 dark:text-teal-400 relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+
+          <h3 class="text-xl font-bold text-pearl-950 dark:text-white mb-3 font-display">Médecine Esthétique</h3>
+          <p class="text-pearl-600 dark:text-pearl-400 mb-6 leading-relaxed">
+            Traitements non invasifs pour rajeunir, harmoniser et sublimer votre visage naturellement.
+          </p>
+          <ul class="space-y-3 text-sm text-pearl-600 dark:text-pearl-400" role="list">
+            <li class="flex items-center gap-2 reveal up stagger-1 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Toxine botulique (rides d'expression)</li>
+            <li class="flex items-center gap-2 reveal up stagger-2 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Acide hyaluronique (volumes, lèvres, cernes)</li>
+            <li class="flex items-center gap-2 reveal up stagger-3 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Skinboosters & mésothérapie</li>
+            <li class="flex items-center gap-2 reveal up stagger-4 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Fils tenseurs résorbables</li>
+          </ul>
+
+          <div class="mt-6 pt-6 border-t border-white/20 dark:border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+            <a href="#contact" class="text-teal-600 dark:text-teal-400 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all duration-300">
+              En savoir plus
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+      </article>
+
+      <!-- Service 3: Laser & Technologies -->
+      <article class="card-interactive group p-8 relative overflow-hidden hover-lift magnetic perspective-reveal" data-magnetic-strength="0.15" data-lift-distance="10" style="animation-delay: 0.2s">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+          <img src="/images/medical/medical-7.jpg" alt="Laser - épilation définitive" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-pearl-900/90 via-pearl-900/30 to-transparent" aria-hidden="true"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-center text-white">
+            <span class="text-sm font-medium">Laser & Technologies</span>
+          </div>
+        </div>
+
+        <div class="relative z-10">
+          <div class="icon-box-lg relative mb-6 group-hover:scale-110 transition-transform duration-500 magnetic" data-magnetic-child="0.2" aria-hidden="true">
+            <div class="absolute inset-0 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl opacity-20 blur-xl transform scale-110"></div>
+            <svg class="w-7 h-7 text-rose-600 dark:text-rose-400 relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+
+          <h3 class="text-xl font-bold text-pearl-950 dark:text-white mb-3 font-display">Laser & Technologies</h3>
+          <p class="text-pearl-600 dark:text-pearl-400 mb-6 leading-relaxed">
+            Plateau technique complet pour traiter taches, vaisseaux, cicatrices et épilation définitive.
+          </p>
+          <ul class="space-y-3 text-sm text-pearl-600 dark:text-pearl-400" role="list">
+            <li class="flex items-center gap-2 reveal up stagger-1 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-rose-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Laser CO2 fractionné (cicatrices, rides)</li>
+            <li class="flex items-center gap-2 reveal up stagger-2 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-rose-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Laser vasculaire (couperose, angiomes)</li>
+            <li class="flex items-center gap-2 reveal up stagger-3 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-rose-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Laser pigmentaire (taches, mélasma)</li>
+            <li class="flex items-center gap-2 reveal up stagger-4 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-rose-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Épilation laser définitive</li>
+          </ul>
+
+          <div class="mt-6 pt-6 border-t border-white/20 dark:border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+            <a href="#contact" class="text-rose-600 dark:text-rose-400 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all duration-300">
+              En savoir plus
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-rose-500/10 to-rose-600/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+      </article>
+
+      <!-- Service 4: Soins Anti-Âge -->
+      <article class="card-interactive group p-8 relative overflow-hidden hover-lift magnetic perspective-reveal" data-magnetic-strength="0.15" data-lift-distance="10" style="animation-delay: 0.3s">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+          <img src="/images/aesthetic/aesthetic-3.jpg" alt="PRP - Plasma Riche en Plaquettes" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-pearl-900/90 via-pearl-900/30 to-transparent" aria-hidden="true"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-center text-white">
+            <span class="text-sm font-medium">Soins Anti-Âge Globaux</span>
+          </div>
+        </div>
+
+        <div class="relative z-10">
+          <div class="icon-box-lg relative mb-6 group-hover:scale-110 transition-transform duration-500 magnetic" data-magnetic-child="0.2" aria-hidden="true">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl opacity-20 blur-xl transform scale-110"></div>
+            <svg class="w-7 h-7 text-amber-600 dark:text-amber-400 relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+
+          <h3 class="text-xl font-bold text-pearl-950 dark:text-white mb-3 font-display">Soins Anti-Âge Globaux</h3>
+          <p class="text-pearl-600 dark:text-pearl-400 mb-6 leading-relaxed">
+            Protocoles personnalisés combinant plusieurs techniques pour un résultat naturel et durable.
+          </p>
+          <ul class="space-y-3 text-sm text-pearl-600 dark:text-pearl-400" role="list">
+            <li class="flex items-center gap-2 reveal up stagger-1 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Protocoles combinés sur-mesure</li>
+            <li class="flex items-center gap-2 reveal up stagger-2 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Radiofréquence & HIFU (ovale du visage)</li>
+            <li class="flex items-center gap-2 reveal up stagger-3 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> PRP (Plasma Riche en Plaquettes)</li>
+            <li class="flex items-center gap-2 reveal up stagger-4 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Relooking regard (cernes, paupières)</li>
+          </ul>
+
+          <div class="mt-6 pt-6 border-t border-white/20 dark:border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+            <a href="#contact" class="text-amber-600 dark:text-amber-400 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all duration-300">
+              En savoir plus
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+      </article>
+
+      <!-- Service 5: Peelings & Hydrafacial -->
+      <article class="card-interactive group p-8 relative overflow-hidden hover-lift magnetic perspective-reveal" data-magnetic-strength="0.15" data-lift-distance="10" style="animation-delay: 0.4s">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+          <img src="/images/aesthetic/aesthetic-2.jpg" alt="Hydrafacial - soin profond" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-pearl-900/90 via-pearl-900/30 to-transparent" aria-hidden="true"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-center text-white">
+            <span class="text-sm font-medium">Peelings & Hydrafacial</span>
+          </div>
+        </div>
+
+        <div class="relative z-10">
+          <div class="icon-box-lg relative mb-6 group-hover:scale-110 transition-transform duration-500 magnetic" data-magnetic-child="0.2" aria-hidden="true">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-2xl opacity-20 blur-xl transform scale-110"></div>
+            <svg class="w-7 h-7 text-indigo-600 dark:text-indigo-400 relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+
+          <h3 class="text-xl font-bold text-pearl-950 dark:text-white mb-3 font-display">Peelings & Hydrafacial</h3>
+          <p class="text-pearl-600 dark:text-pearl-400 mb-6 leading-relaxed">
+            Soins profonds pour renouveler l'éclat, affiner le grain de peau et traiter imperfections.
+          </p>
+          <ul class="space-y-3 text-sm text-pearl-600 dark:text-pearl-400" role="list">
+            <li class="flex items-center gap-2 reveal up stagger-1 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-indigo-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Peelings superficiels & moyens</li>
+            <li class="flex items-center gap-2 reveal up stagger-2 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-indigo-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Hydrafacial (nettoyage, extraction, hydratation)</li>
+            <li class="flex items-center gap-2 reveal up stagger-3 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-indigo-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Traitement acné & pores dilatés</li>
+            <li class="flex items-center gap-2 reveal up stagger-4 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-indigo-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Éclat & teint terne</li>
+          </ul>
+
+          <div class="mt-6 pt-6 border-t border-white/20 dark:border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+            <a href="#contact" class="text-indigo-600 dark:text-indigo-400 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all duration-300">
+              En savoir plus
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-indigo-500/10 to-violet-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+      </article>
+
+      <!-- Service 6: Chirurgie Dermatologique -->
+      <article class="card-interactive group p-8 relative overflow-hidden hover-lift magnetic perspective-reveal" data-magnetic-strength="0.15" data-lift-distance="10" style="animation-delay: 0.5s">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+          <img src="/images/medical/medical-5.jpg" alt="Chirurgie dermatologique - excision grain de beauté" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-pearl-900/90 via-pearl-900/30 to-transparent" aria-hidden="true"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-center text-white">
+            <span class="text-sm font-medium">Chirurgie Dermatologique</span>
+          </div>
+        </div>
+
+        <div class="relative z-10">
+          <div class="icon-box-lg relative mb-6 group-hover:scale-110 transition-transform duration-500 magnetic" data-magnetic-child="0.2" aria-hidden="true">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl opacity-20 blur-xl transform scale-110"></div>
+            <svg class="w-7 h-7 text-purple-600 dark:text-purple-400 relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+
+          <h3 class="text-xl font-bold text-pearl-950 dark:text-white mb-3 font-display">Chirurgie Dermatologique</h3>
+          <p class="text-pearl-600 dark:text-pearl-400 mb-6 leading-relaxed">
+            Excisions et interventions mineures sous anesthésie locale au cabinet.
+          </p>
+          <ul class="space-y-3 text-sm text-pearl-600 dark:text-pearl-400" role="list">
+            <li class="flex items-center gap-2 reveal up stagger-1 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-purple-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Excision grains de beauté, kystes</li>
+            <li class="flex items-center gap-2 reveal up stagger-2 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-purple-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Biopsies cutanées</li>
+            <li class="flex items-center gap-2 reveal up stagger-3 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-purple-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Chirurgie ongulaire</li>
+            <li class="flex items-center gap-2 reveal up stagger-4 duration-fast magnetic" data-magnetic-strength="0.05"><svg class="w-4 h-4 text-purple-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Reconstruction & cicatrices</li>
+          </ul>
+
+          <div class="mt-6 pt-6 border-t border-white/20 dark:border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+            <a href="#contact" class="text-purple-600 dark:text-purple-400 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all duration-300">
+              En savoir plus
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-purple-500/10 to-violet-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+      </article>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-16 reveal up stagger-7 duration-normal ease-spring">
+      <p class="text-pearl-600 dark:text-pearl-400 mb-4">Vous ne savez pas quel traitement vous convient ?</p>
+      <a href="#contact" class="btn-primary inline-flex magnetic ripple hover-lift" data-magnetic-strength="0.2" data-lift-distance="8">Consultation personnalisée</a>
+    </div>
+  </div>
+
+  <!-- Floating geometric shapes -->
+  <div class="absolute top-20 left-4 w-16 h-16 border-2 border-cyan-500/30 dark:border-cyan-400/30 rounded-2xl rotate-12 float-slow opacity-50 hidden lg:block" aria-hidden="true"></div>
+  <div class="absolute top-40 right-4 w-12 h-12 bg-gradient-to-br from-violet-500/20 to-rose-500/20 rounded-full float-fast hidden lg:block" aria-hidden="true" style="animation-delay: 1s"></div>
+  <div class="absolute bottom-20 left-8 w-10 h-10 border-2 border-med-500/30 dark:border-med-400/30 rounded-lg rotate-45 float-slow opacity-50 hidden lg:block" aria-hidden="true" style="animation-delay: 2s"></div>
+  <div class="absolute bottom-40 right-8 w-8 h-8 bg-rose-500/20 rounded-full float-fast hidden lg:block" aria-hidden="true" style="animation-delay: 1.5s"></div>
+</section>

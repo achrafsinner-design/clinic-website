@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dermatologie-oumakhir.ma/sitemap-index.xml

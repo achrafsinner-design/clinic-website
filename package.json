@@ -1,0 +1,22 @@
+{
+  "name": "dermatologie-oumakhir",
+  "type": "module",
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "astro": "^4.16.0",
+    "three": "^0.165.0",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.13"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "@types/three": "^0.165.0"
+  }
+}

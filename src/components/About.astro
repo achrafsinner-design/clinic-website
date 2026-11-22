@@ -1,0 +1,567 @@
+---
+import WebGLBackground from './WebGLBackground.astro';
+interface Props {}
+---
+
+<section id="about" class="relative overflow-hidden" aria-labelledby="about-title">
+  <!-- WebGL Background - Clinic atmosphere -->
+  <WebGLBackground variant="waves" class="absolute inset-0 -z-20" />
+
+  <!-- Aurora glow -->
+  <div class="absolute inset-0 -z-10 aurora-bg opacity-60" aria-hidden="true"></div>
+
+  <!-- Noise texture -->
+  <div class="absolute inset-0 -z-10 noise opacity-[0.015]" aria-hidden="true"></div>
+
+  <!-- Scan lines for depth -->
+  <div class="absolute inset-0 -z-10 scan-lines pointer-events-none opacity-30" aria-hidden="true"></div>
+
+  <!-- Floating gradient orbs -->
+  <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/15 to-violet-500/15 rounded-full blur-3xl float-3d" aria-hidden="true"></div>
+  <div class="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gradient-to-br from-rose-500/15 to-amber-500/15 rounded-full blur-3xl float-3d" style="animation-delay: 2s" aria-hidden="true"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-med-500/10 to-teal-500/10 rounded-full blur-3xl float-slow" aria-hidden="true"></div>
+
+  <div class="section-container relative z-10 py-20 lg:py-32">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20 reveal up stagger-1 duration-slow ease-spring">
+      <span class="section-label magnetic" data-magnetic-strength="0.1">Le Cabinet</span>
+      <h2 id="about-title" class="section-title font-display reveal-text">
+        Un espace dédié à
+        <br class="hidden sm:block" />
+        <span class="text-gradient">votre peau</span>
+      </h2>
+      <p class="section-subtitle mx-auto">
+        Découvrez notre cabinet moderne au cœur de Marrakech, où expertise médicale et technologies de pointe se rencontrent dans une atmosphère apaisante.
+      </p>
+    </div>
+
+    <!-- Main Clinic Visual - Large immersive photo with 3D layers -->
+    <div class="relative reveal right stagger-2 duration-slower ease-expo mb-16 lg:mb-20">
+      <!-- 3D Parallax Container -->
+      <div class="relative" id="clinic-parallax" style="perspective: 1000px;">
+        <!-- Layer 1: Far background - Building/Environment -->
+        <div class="absolute inset-0 -z-10 opacity-40 transition-opacity duration-1000" aria-hidden="true">
+          <img
+            src="/images/clinic/clinic-building.jpg"
+            alt="Bâtiment du cabinet"
+            class="w-full h-full object-cover rounded-3xl"
+            loading="lazy"
+            data-depth="0.1"
+          />
+        </div>
+
+        <!-- Layer 2: Mid background - Reception/Waiting area -->
+        <div class="absolute inset-4 -z-5 opacity-60 transition-opacity duration-1000" aria-hidden="true">
+          <img
+            src="/images/clinic/clinic-reception.jpg"
+            alt="Salle d'attente"
+            class="w-full h-full object-cover rounded-2xl"
+            loading="lazy"
+            data-depth="0.3"
+          />
+        </div>
+
+        <!-- Layer 3: Main clinic photo - Large hero image -->
+        <div class="relative aspect-[16/10] w-full max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-[0_50px_150px_-30px_rgba(0,0,0,0.3)] group perspective-reveal tilt-card hover-lift" data-tilt-max="5" data-lift-distance="6">
+          <img
+            src="/images/clinic/clinic-main.jpg"
+            alt="Cabinet de Dermatologie Dr Siham OUMAKHIR - Vue principale"
+            class="w-full h-full object-cover transition-transform duration-1500 ease-out group-hover:scale-[1.02]"
+            loading="eager"
+            fetchpriority="high"
+          />
+
+          <!-- Gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-pearl-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" aria-hidden="true"></div>
+
+          <!-- Animated stat badges floating over image -->
+          <div class="absolute bottom-8 left-8 right-8 grid grid-cols-3 gap-4 reveal up stagger-1 duration-slower ease-bounce">
+            <div class="glass-strong p-5 text-center magnetic hover-lift group/badge" data-magnetic-strength="0.15" data-lift-distance="8">
+              <div class="relative">
+                <div class="text-4xl font-bold font-mono text-med-600 dark:text-med-400 counter" data-target="15" data-suffix="+">15+</div>
+                <div class="absolute inset-0 bg-gradient-to-r from-med-500/30 to-teal-500/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+              </div>
+              <div class="text-xs text-pearl-600 dark:text-pearl-400 mt-2 font-medium">Ans d'expertise</div>
+              <!-- Pulse ring -->
+              <div class="absolute inset-0 -z-10 rounded-2xl border-2 border-med-500/50 opacity-0 group-hover:opacity-100 transition-all duration-700 animate-ping" aria-hidden="true"></div>
+            </div>
+            <div class="glass-strong p-5 text-center magnetic hover-lift group/badge" data-magnetic-strength="0.15" data-lift-distance="8" style="animation-delay: 0.15s">
+              <div class="relative">
+                <div class="text-4xl font-bold font-mono text-teal-600 dark:text-teal-400 counter" data-target="5000" data-suffix="+">5000+</div>
+                <div class="absolute inset-0 bg-gradient-to-r from-teal-500/30 to-cyan-500/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+              </div>
+              <div class="text-xs text-pearl-600 dark:text-pearl-400 mt-2 font-medium">Patients soignés</div>
+              <div class="absolute inset-0 -z-10 rounded-2xl border-2 border-teal-500/50 opacity-0 group-hover:opacity-100 transition-all duration-700 animate-ping" style="animation-delay: 0.5s" aria-hidden="true"></div>
+            </div>
+            <div class="glass-strong p-5 text-center magnetic hover-lift group/badge" data-magnetic-strength="0.15" data-lift-distance="8" style="animation-delay: 0.3s">
+              <div class="relative">
+                <div class="text-4xl font-bold font-mono text-rose-600 dark:text-rose-400 counter" data-target="4.7" data-decimals="1" data-suffix="/5">4,7/5</div>
+                <div class="absolute inset-0 bg-gradient-to-r from-rose-500/30 to-rose-600/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+              </div>
+              <div class="text-xs text-pearl-600 dark:text-pearl-400 mt-2 font-medium">Note Google</div>
+              <div class="absolute inset-0 -z-10 rounded-2xl border-2 border-rose-500/50 opacity-0 group-hover:opacity-100 transition-all duration-700 animate-ping" style="animation-delay: 1s" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Floating info cards on hover - Left side -->
+          <div class="absolute left-8 top-1/2 -translate-y-1/2 w-72 glass-strong p-5 border border-white/30 dark:border-white/20 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2)] transform translate-x-8 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-1000 ease-out reveal scale stagger-2 duration-slower ease-bounce magnetic" data-magnetic-strength="0.1" style="animation-delay: 0.5s">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-med-500 to-teal-500 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
+                <svg class="w-6 h-6 text-white relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+              </div>
+              <div>
+                <p class="font-semibold text-pearl-950 dark:text-white">Approche personnalisée</p>
+                <p class="text-sm text-pearl-600 dark:text-pearl-400">Chaque patient est unique</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
+                <svg class="w-6 h-6 text-white relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+              </div>
+              <div>
+                <p class="font-semibold text-pearl-950 dark:text-white">Technologies avancées</p>
+                <p class="text-sm text-pearl-600 dark:text-pearl-400">Équipements dernière génération</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating info cards on hover - Right side -->
+          <div class="absolute right-8 top-1/2 -translate-y-1/2 w-72 glass-strong p-5 border border-white/30 dark:border-white/20 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2)] transform -translate-x-8 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-1000 ease-out reveal scale stagger-2 duration-slower ease-bounce magnetic" data-magnetic-strength="0.1" style="animation-delay: 0.7s">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-rose-600 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
+                <svg class="w-6 h-6 text-white relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+                <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+              </div>
+              <div>
+                <p class="font-semibold text-pearl-950 dark:text-white">Résultats naturels</p>
+                <p class="text-sm text-pearl-600 dark:text-pearl-400">Sublimer sans transformer</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
+                <svg class="w-6 h-6 text-white relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+              </div>
+              <div>
+                <p class="font-semibold text-pearl-950 dark:text-white">Suivi continu</p>
+                <p class="text-sm text-pearl-600 dark:text-pearl-400">Accompagnement durable</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top certification badge -->
+          <div class="absolute top-6 right-6 reveal scale stagger-3 duration-slower ease-bounce magnetic hover-lift" data-magnetic-strength="0.1" data-lift-distance="6">
+            <div class="glass-strong px-5 py-3 rounded-full transition-all duration-500 hover:scale-105 relative overflow-hidden group/cert">
+              <div class="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 relative">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span class="font-semibold text-sm">Certifié</span>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-violet-500 opacity-0 group-hover/cert:opacity-20 transition-opacity duration-500" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Doctor info overlay on hover - Bottom -->
+          <div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-1000 ease-out bg-gradient-to-t from-pearl-900/95 via-pearl-900/50 to-transparent">
+            <div class="text-center text-white max-w-2xl mx-auto">
+              <h3 class="text-2xl font-bold mb-2 font-display">Dr Siham OUMAKHIR</h3>
+              <p class="text-med-300 font-medium mb-3">Dermatologue - Médecine Esthétique</p>
+              <p class="text-pearl-300 text-base max-w-lg mx-auto mb-6">Expertise médicale • Écoute bienveillante • Résultats naturels et durables</p>
+              <div class="flex items-center justify-center gap-6">
+                <a href="https://wa.me/212762367337" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-xl glass-strong flex items-center justify-center text-pearl-300 hover:text-white hover:shadow-[0_10px_30px_-10px_rgba(6,182,212,0.4)] transition-all duration-300 magnetic hover-lift" data-magnetic-strength="0.25" data-lift-distance="4" aria-label="WhatsApp">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.454.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378 9.86 9.86 0 01-.424-.056 10.19 10.19 0 00-.467-.044 11.55 11.55 0 01-1.176-.265C.894 19.531 0 18.823 0 17.58V6.75C0 4.136 2.128 2 4.75 2c1.116 0 2.144.272 3.03.774C9.096 3.33 10.404 4 11.5 4c1.666 0 3.066-.933 3.75-2.252a.75.75 0 01.752-.432c1.333 0 2.62.547 3.458 1.582A8.09 8.09 0 0123 6.75v10.83c0 1.254-.896 2.382-2.196 2.834-.67.23-1.356.398-1.95.424a.75.75 0 01-.583-.105 7.54 7.54 0 01-1.58-.467 7.25 7.25 0 01-.578-.207z"/></svg>
+                </a>
+                <a href="tel:+212762367337" class="w-12 h-12 rounded-xl glass-strong flex items-center justify-center text-pearl-300 hover:text-white hover:shadow-[0_10px_30px_-10px_rgba(34,197,94,0.4)] transition-all duration-300 magnetic hover-lift" data-magnetic-strength="0.25" data-lift-distance="4" aria-label="Appeler">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </a>
+                <a href="#contact" class="w-12 h-12 rounded-xl glass-strong flex items-center justify-center text-pearl-300 hover:text-white hover:shadow-[0_10px_30px_-10px_rgba(244,63,94,0.4)] transition-all duration-300 magnetic hover-lift" data-magnetic-strength="0.25" data-lift-distance="4" aria-label="Rendez-vous">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decorative floating geometric elements around main image -->
+        <div class="absolute -top-8 -right-8 w-40 h-40 bg-gradient-to-br from-med-500/15 to-teal-500/15 rounded-full blur-2xl float-3d" aria-hidden="true"></div>
+        <div class="absolute -bottom-12 -left-12 w-32 h-32 bg-gradient-to-br from-teal-500/15 to-cyan-500/15 rounded-full blur-2xl float-3d" style="animation-delay: 2s" aria-hidden="true"></div>
+        <div class="absolute top-1/2 -right-16 w-24 h-24 bg-gradient-to-br from-rose-500/15 to-violet-500/15 rounded-full blur-2xl float-3d" style="animation-delay: 1s" aria-hidden="true"></div>
+        <div class="absolute top-20 left-4 hidden lg:block" aria-hidden="true">
+          <div class="w-10 h-10 border-2 border-cyan-500/50 dark:border-cyan-400/50 rounded-xl rotate-45 float-slow opacity-70"></div>
+        </div>
+        <div class="absolute bottom-20 right-4 hidden lg:block" aria-hidden="true">
+          <div class="w-8 h-8 bg-gradient-to-br from-violet-500/30 to-rose-500/30 rounded-full float-fast"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Grid - 3D Cards -->
+    <div class="grid lg:grid-cols-4 gap-6 mb-16 lg:mb-20">
+      <div class="card-interactive group p-6 hover-lift magnetic perspective-reveal" data-magnetic-strength="0.1" data-lift-distance="8" style="animation-delay: 0.1s">
+        <div class="relative mb-4">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-med-500 to-teal-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 relative overflow-hidden">
+            <svg class="w-7 h-7 text-white relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+          </div>
+          <!-- Glow effect -->
+          <div class="absolute -inset-2 bg-gradient-to-br from-med-500 to-teal-500 rounded-2xl opacity-0 blur-xl group-hover:opacity-20 transition-opacity duration-500" aria-hidden="true"></div>
+        </div>
+        <h3 class="text-lg font-bold text-pearl-950 dark:text-white font-display mb-2">Écoute & Diagnostic</h3>
+        <p class="text-pearl-600 dark:text-pearl-400 text-sm leading-relaxed">Consultation approfondie pour comprendre vos antécédents et établir un diagnostic rigoureux.</p>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-med-500 to-teal-500 origin-left group-hover:origin-left transition-transform duration-500 ease-spring" style="transform-origin: left; transform: scaleX(0);" aria-hidden="true"></div>
+      </div>
+
+      <div class="card-interactive group p-6 hover-lift magnetic perspective-reveal" data-magnetic-strength="0.1" data-lift-distance="8" style="animation-delay: 0.2s">
+        <div class="relative mb-4">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 relative overflow-hidden">
+            <svg class="w-7 h-7 text-white relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+          </div>
+          <div class="absolute -inset-2 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl opacity-0 blur-xl group-hover:opacity-20 transition-opacity duration-500" aria-hidden="true"></div>
+        </div>
+        <h3 class="text-lg font-bold text-pearl-950 dark:text-white font-display mb-2">Technologies de Pointe</h3>
+        <p class="text-pearl-600 dark:text-pearl-400 text-sm leading-relaxed">Laser, radiofréquence, HIFU, imagerie avancée pour des traitements efficaces et sûrs.</p>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 origin-left group-hover:origin-left transition-transform duration-500 ease-spring" style="transform-origin: left; transform: scaleX(0);" aria-hidden="true"></div>
+      </div>
+
+      <div class="card-interactive group p-6 hover-lift magnetic perspective-reveal" data-magnetic-strength="0.1" data-lift-distance="8" style="animation-delay: 0.3s">
+        <div class="relative mb-4">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-500 to-rose-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 relative overflow-hidden">
+            <svg class="w-7 h-7 text-white relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+            <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+          </div>
+          <div class="absolute -inset-2 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl opacity-0 blur-xl group-hover:opacity-20 transition-opacity duration-500" aria-hidden="true"></div>
+        </div>
+        <h3 class="text-lg font-bold text-pearl-950 dark:text-white font-display mb-2">Résultats Naturels</h3>
+        <p class="text-pearl-600 dark:text-pearl-400 text-sm leading-relaxed">Sublimer votre beauté en préservant votre identité. L'harmonie avant tout.</p>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-500 to-rose-600 origin-left group-hover:origin-left transition-transform duration-500 ease-spring" style="transform-origin: left; transform: scaleX(0);" aria-hidden="true"></div>
+      </div>
+
+      <div class="card-interactive group p-6 hover-lift magnetic perspective-reveal" data-magnetic-strength="0.1" data-lift-distance="8" style="animation-delay: 0.4s">
+        <div class="relative mb-4">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 relative overflow-hidden">
+            <svg class="w-7 h-7 text-white relative" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+          </div>
+          <div class="absolute -inset-2 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl opacity-0 blur-xl group-hover:opacity-20 transition-opacity duration-500" aria-hidden="true"></div>
+        </div>
+        <h3 class="text-lg font-bold text-pearl-950 dark:text-white font-display mb-2">Suivi & Accompagnement</h3>
+        <p class="text-pearl-600 dark:text-pearl-400 text-sm leading-relaxed">Relation durable post-traitement, conseils personnalisés et disponibilité continue.</p>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 to-orange-500 origin-left group-hover:origin-left transition-transform duration-500 ease-spring" style="transform-origin: left; transform: scaleX(0);" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <!-- Credentials - 3D Flip Cards -->
+    <div class="mt-12 pt-10 border-t border-white/20 dark:border-white/10 reveal up stagger-3 duration-normal ease-spring">
+      <h3 class="text-lg font-semibold text-pearl-950 dark:text-white mb-8 font-display text-center">Formation & Certifications</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="card-interactive p-4 hover-lift magnetic perspective-reveal group card-flip" data-magnetic-strength="0.1" data-lift-distance="6">
+          <div class="card-front flex items-center gap-3 h-full">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-med-500 to-teal-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500 relative overflow-hidden">
+              <svg class="w-5 h-5 text-white relative" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+            </div>
+            <span class="text-sm text-pearl-700 dark:text-pearl-300 font-medium">DES Dermatologie - Vénéréologie</span>
+          </div>
+          <div class="card-back flex items-center justify-center p-4">
+            <p class="text-sm text-pearl-600 dark:text-pearl-400 text-center">Diplôme d'études spécialisées en dermatologie et vénéréologie</p>
+          </div>
+        </div>
+        <div class="card-interactive p-4 hover-lift magnetic perspective-reveal group card-flip" data-magnetic-strength="0.1" data-lift-distance="6" style="animation-delay: 0.1s">
+          <div class="card-front flex items-center gap-3 h-full">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500 relative overflow-hidden">
+              <svg class="w-5 h-5 text-white relative" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+            </div>
+            <span class="text-sm text-pearl-700 dark:text-pearl-300 font-medium">DU Médecine Esthétique & Lasers</span>
+          </div>
+          <div class="card-back flex items-center justify-center p-4">
+            <p class="text-sm text-pearl-600 dark:text-pearl-400 text-center">Diplôme universitaire spécialisé en médecine esthétique et lasers</p>
+          </div>
+        </div>
+        <div class="card-interactive p-4 hover-lift magnetic perspective-reveal group card-flip" data-magnetic-strength="0.1" data-lift-distance="6" style="animation-delay: 0.2s">
+          <div class="card-front flex items-center gap-3 h-full">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-500 to-rose-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500 relative overflow-hidden">
+              <svg class="w-5 h-5 text-white relative" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+            </div>
+            <span class="text-sm text-pearl-700 dark:text-pearl-300 font-medium">Membre Société Marocaine Dermatologie</span>
+          </div>
+          <div class="card-back flex items-center justify-center p-4">
+            <p class="text-sm text-pearl-600 dark:text-pearl-400 text-center">Membre actif de la société savante de référence</p>
+          </div>
+        </div>
+        <div class="card-interactive p-4 hover-lift magnetic perspective-reveal group card-flip" data-magnetic-strength="0.1" data-lift-distance="6" style="animation-delay: 0.3s">
+          <div class="card-front flex items-center gap-3 h-full">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500 relative overflow-hidden">
+              <svg class="w-5 h-5 text-white relative" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+            </div>
+            <span class="text-sm text-pearl-700 dark:text-pearl-300 font-medium">Formation continue internationale</span>
+          </div>
+          <div class="card-back flex items-center justify-center p-4">
+            <p class="text-sm text-pearl-600 dark:text-pearl-400 text-center">Participation régulière aux congrès et formations internationales</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-16 reveal up stagger-4 duration-normal ease-spring">
+      <a href="#contact" class="btn-primary inline-flex magnetic ripple hover-lift" data-magnetic-strength="0.2" data-lift-distance="8">Prendre rendez-vous</a>
+    </div>
+  </div>
+
+  <!-- Bottom decorative shapes -->
+  <div class="absolute bottom-16 left-4 w-20 h-20 border-2 border-cyan-500/30 dark:border-cyan-400/30 rounded-2xl rotate-12 float-slow opacity-50 hidden lg:block" aria-hidden="true"></div>
+  <div class="absolute bottom-32 right-4 w-16 h-16 bg-gradient-to-br from-violet-500/20 to-rose-500/20 rounded-full float-fast hidden lg:block" aria-hidden="true" style="animation-delay: 1s"></div>
+  <div class="absolute bottom-20 left-16 w-12 h-12 border-2 border-med-500/30 dark:border-med-400/30 rounded-xl rotate-45 float-slow opacity-50 hidden lg:block" aria-hidden="true" style="animation-delay: 2s"></div>
+</section>
+
+<script>
+  import WebGLBackground from './WebGLBackground.astro';
+</script>
+
+<script is:inline>
+  // Advanced parallax effect for clinic photo layers
+  const parallaxContainer = document.getElementById('clinic-parallax');
+
+  if (parallaxContainer && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const layers = parallaxContainer.querySelectorAll('[data-depth]');
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+      mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+    }, { passive: true });
+
+    function animate() {
+      currentX += (mouseX - currentX) * 0.05;
+      currentY += (mouseY - currentY) * 0.05;
+
+      layers.forEach(layer => {
+        const depth = parseFloat(layer.dataset.depth || '0');
+        const x = currentX * 30 * depth;
+        const y = currentY * 30 * depth;
+        layer.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  }
+
+  // Intersection Observer for scroll-triggered animations on main image
+  const mainImage = document.querySelector('#clinic-parallax .group');
+  if (mainImage) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.3, rootMargin: '0px 0px -100px 0px' });
+
+    observer.observe(mainImage);
+  }
+
+  // Counter animation for stats when they come into view
+  const statCounters = document.querySelectorAll('#clinic-parallax .counter');
+  if (statCounters.length) {
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseFloat(counter.dataset.target || '0');
+          const suffix = counter.dataset.suffix || '';
+          const decimals = parseInt(counter.dataset.decimals || '0', 10);
+          const duration = 2000;
+
+          if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            animateCounter(counter, target, duration, '', suffix, decimals);
+          } else {
+            counter.textContent = target.toFixed(decimals) + suffix;
+          }
+
+          counterObserver.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.5, rootMargin: '0px 0px -50px 0px' });
+
+    statCounters.forEach(counter => counterObserver.observe(counter));
+  }
+
+  function animateCounter(el, target, duration, prefix, suffix, decimals) {
+    const startTime = performance.now();
+    const startValue = 0;
+
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = startValue + (target - startValue) * eased;
+
+      el.textContent = prefix + current.toFixed(decimals) + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = prefix + target.toFixed(decimals) + suffix;
+      }
+    }
+
+    requestAnimationFrame(update);
+  }
+
+  // Card flip on click for credentials
+  document.querySelectorAll('.card-flip').forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a, button, [role="button"]')) return;
+      card.classList.toggle('flipped');
+    });
+  });
+
+  // GSAP enhanced animations for feature cards
+  if (typeof window !== 'undefined' && (window as any).gsap) {
+    const gsap = (window as any).gsap;
+    const ScrollTrigger = (window as any).ScrollTrigger;
+
+    // Animate feature cards on scroll
+    gsap.utils.toArray('.card-interactive').forEach((card, i) => {
+      gsap.fromTo(card,
+        { opacity: 0, y: 60, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 1,
+          delay: i * 0.1,
+          ease: 'expo.out',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
+          }
+        }
+      );
+    });
+
+    // Animate credentials cards with flip hint
+    gsap.utils.toArray('.card-flip').forEach((card, i) => {
+      gsap.fromTo(card,
+        { opacity: 0, y: 40, rotateY: -15 },
+        {
+          opacity: 1,
+          y: 0,
+          rotateY: 0,
+          duration: 0.8,
+          delay: i * 0.08,
+          ease: 'expo.out',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 90%',
+            toggleActions: 'play none none reverse'
+          }
+        }
+      );
+    });
+  }
+</script>
+
+<style>
+  /* Card flip styles */
+  .card-flip {
+    perspective: 1000px;
+    cursor: pointer;
+  }
+
+  .card-flip .card-front,
+  .card-flip .card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card-flip .card-front {
+    transform: rotateY(0deg);
+    z-index: 2;
+  }
+
+  .card-flip .card-back {
+    transform: rotateY(180deg);
+    background: var(--gradient-card);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 1.5rem;
+  }
+
+  .card-flip.flipped .card-front {
+    transform: rotateY(-180deg);
+  }
+
+  .card-flip.flipped .card-back {
+    transform: rotateY(0deg);
+  }
+
+  .card-flip .card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* In-view animation for main image */
+  #clinic-parallax .group {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  #clinic-parallax .group.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .float-3d,
+    .float-slow,
+    .float-fast,
+    .animate-ping,
+    .orbit-slow {
+      animation: none !important;
+    }
+
+    #clinic-parallax .group {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .card-flip .card-front,
+    .card-flip .card-back {
+      transition: none;
+    }
+  }
+</style>

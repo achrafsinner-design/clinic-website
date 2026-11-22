@@ -1,0 +1,352 @@
+---
+interface Props {}
+---
+
+<section id="reviews" class="py-20 lg:py-32 relative overflow-hidden" aria-labelledby="reviews-title">
+  <!-- Aurora glow -->
+  <div class="absolute inset-0 -z-10 aurora-bg opacity-60" aria-hidden="true"></div>
+
+  <!-- Noise texture -->
+  <div class="absolute inset-0 -z-10 noise opacity-[0.015]" aria-hidden="true"></div>
+
+  <div class="section-container relative z-10">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal up stagger-1 duration-normal ease-spring">
+      <span class="section-label magnetic" data-magnetic-strength="0.1">Témoignages</span>
+      <h2 id="reviews-title" class="section-title font-display reveal-text">
+        La parole à nos
+        <br class="hidden sm:block" />
+        <span class="text-gradient">patients</span>
+      </h2>
+      <p class="section-subtitle mx-auto">
+        Plus de 165 avis sur Google avec une note de 4,7/5. Découvrez ce que nos patients pensent de leur expérience.
+      </p>
+    </div>
+
+    <!-- Rating Summary with Animated Counters -->
+    <div class="max-w-4xl mx-auto mb-16 reveal up stagger-2 duration-slow ease-spring">
+      <div class="card-interactive p-8 md:p-12 text-center group hover-lift magnetic perspective-reveal" data-magnetic-strength="0.1" data-lift-distance="8">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-violet-500/10 to-rose-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+
+        <div class="relative flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+          <!-- Main Rating -->
+          <div class="flex flex-col items-center">
+            <div class="text-7xl md:text-9xl font-bold font-mono text-gradient counter" data-target="4.7" data-decimals="1">4,7</div>
+            <div class="flex items-center justify-center gap-1 mt-3">
+              <svg class="w-7 h-7 text-amber-400 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-7 h-7 text-amber-400 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-7 h-7 text-amber-400 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-7 h-7 text-amber-400 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-7 h-7 text-amber-400 fill-current opacity-50" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="text-pearl-600 dark:text-pearl-400 mt-3 text-sm font-medium">Basé sur <span class="font-mono font-bold counter" data-target="165">165</span> avis Google</p>
+          </div>
+
+          <!-- Divider -->
+          <div class="hidden md:block w-px h-32 bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
+          <div class="md:hidden w-32 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+
+          <!-- Keywords -->
+          <div class="grid grid-cols-3 gap-4 text-center">
+            <div class="card-interactive p-4 hover-lift magnetic" data-magnetic-strength="0.1" data-lift-distance="4">
+              <div class="text-4xl font-bold font-mono text-cyan-600 dark:text-cyan-400 counter" data-target="13">13</div>
+              <div class="text-xs text-pearl-500 dark:text-pearl-400 mt-1">« Humaine »</div>
+            </div>
+            <div class="card-interactive p-4 hover-lift magnetic" data-magnetic-strength="0.1" data-lift-distance="4" style="animation-delay: 0.1s">
+              <div class="text-4xl font-bold font-mono text-violet-600 dark:text-violet-400 counter" data-target="12">12</div>
+              <div class="text-xs text-pearl-500 dark:text-pearl-400 mt-1">« Compétente »</div>
+            </div>
+            <div class="card-interactive p-4 hover-lift magnetic" data-magnetic-strength="0.1" data-lift-distance="4" style="animation-delay: 0.2s">
+              <div class="text-4xl font-bold font-mono text-rose-600 dark:text-rose-400 counter" data-target="8">8</div>
+              <div class="text-xs text-pearl-500 dark:text-pearl-400 mt-1">« Bienveillance »</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews Carousel with 3D Cards -->
+    <div class="relative reveal up stagger-3 duration-slow ease-spring">
+      <div id="reviews-carousel" class="overflow-hidden" style="perspective: 1000px;">
+        <div class="flex gap-6" id="reviews-track" style="will-change: transform;">
+          <!-- Review 1 -->
+          <article class="card-interactive flex-shrink-0 w-full sm:w-96 p-6 hover-lift magnetic perspective-reveal group" data-review="1" data-magnetic-strength="0.1" data-lift-distance="8">
+            <div class="relative">
+              <div class="flex items-center gap-1 mb-4" role="img" aria-label="5 étoiles sur 5">
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <blockquote class="text-pearl-600 dark:text-pearl-400 leading-relaxed mb-4 text-base relative z-10">
+                "Je tiens à remercier infiniment ma dermatologue pour son professionnalisme, sa gentillesse et surtout son écoute exceptionnelle."
+              </blockquote>
+              <footer class="relative z-10">
+                <div class="font-medium text-pearl-950 dark:text-white">Ishraq Aboumehdi</div>
+                <div class="text-sm text-pearl-500 dark:text-pearl-400">4 avis • il y a 2 mois</div>
+              </footer>
+            </div>
+            <!-- Glow accent -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-rose-500/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="card-interactive flex-shrink-0 w-full sm:w-96 p-6 hover-lift magnetic perspective-reveal group" data-review="2" data-magnetic-strength="0.1" data-lift-distance="8">
+            <div class="relative">
+              <div class="flex items-center gap-1 mb-4" role="img" aria-label="5 étoiles sur 5">
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <blockquote class="text-pearl-600 dark:text-pearl-400 leading-relaxed mb-4 text-base relative z-10">
+                "Je recommande vivement Dr Oumakhir. C'est une dermatologue très professionnelle, compétente, sérieuse et à l'écoute. Elle est calme, rassurante et prend le temps d'expliquer les traitements avec patience."
+              </blockquote>
+              <footer class="relative z-10">
+                <div class="font-medium text-pearl-950 dark:text-white">Akourim Hanane</div>
+                <div class="text-sm text-pearl-500 dark:text-pearl-400">1 avis • il y a 5 mois</div>
+              </footer>
+            </div>
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-teal-500/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="card-interactive flex-shrink-0 w-full sm:w-96 p-6 hover-lift magnetic perspective-reveal group" data-review="3" data-magnetic-strength="0.1" data-lift-distance="8">
+            <div class="relative">
+              <div class="flex items-center gap-1 mb-4" role="img" aria-label="5 étoiles sur 5">
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <blockquote class="text-pearl-600 dark:text-pearl-400 leading-relaxed mb-4 text-base relative z-10">
+                "Excellente dermatologue ! Très sérieuse et surtout compétente, elle prend vraiment le temps d'écouter et de comprendre les besoins de ses patients. J'ai particulièrement apprécié son approche honnête et pas du tout matérialiste."
+              </blockquote>
+              <footer class="relative z-10">
+                <div class="font-medium text-pearl-950 dark:text-white">Maryam HAKKOUR</div>
+                <div class="text-sm text-pearl-500 dark:text-pearl-400">3 avis • il y a 6 mois</div>
+              </footer>
+            </div>
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-cyan-500/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+          </article>
+
+          <!-- Review 4 -->
+          <article class="card-interactive flex-shrink-0 w-full sm:w-96 p-6 hover-lift magnetic perspective-reveal group" data-review="4" data-magnetic-strength="0.1" data-lift-distance="8">
+            <div class="relative">
+              <div class="flex items-center gap-1 mb-4" role="img" aria-label="5 étoiles sur 5">
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <blockquote class="text-pearl-600 dark:text-pearl-400 leading-relaxed mb-4 text-base relative z-10">
+                "Une médecin exceptionnelle ! Douce, patiente, elle explique tout dans les moindres détails. Le cabinet est moderne, propre et l'accueil est chaleureux. Je la recommande les yeux fermés."
+              </blockquote>
+              <footer class="relative z-10">
+                <div class="font-medium text-pearl-950 dark:text-white">Fatima Z.</div>
+                <div class="text-sm text-pearl-500 dark:text-pearl-400">2 avis • il y a 3 mois</div>
+              </footer>
+            </div>
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-violet-500/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+          </article>
+
+          <!-- Review 5 -->
+          <article class="card-interactive flex-shrink-0 w-full sm:w-96 p-6 hover-lift magnetic perspective-reveal group" data-review="5" data-magnetic-strength="0.1" data-lift-distance="8">
+            <div class="relative">
+              <div class="flex items-center gap-1 mb-4" role="img" aria-label="5 étoiles sur 5">
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <blockquote class="text-pearl-600 dark:text-pearl-400 leading-relaxed mb-4 text-base relative z-10">
+                "Traitement laser pour cicatrices d'acné : résultat au-delà de mes espérances ! Dr Oumakhir a pris le temps de m'expliquer le protocole, les suites, et m'a rassurée. Équipe aux petits soins."
+              </blockquote>
+              <footer class="relative z-10">
+                <div class="font-medium text-pearl-950 dark:text-white">Youssef B.</div>
+                <div class="text-sm text-pearl-500 dark:text-pearl-400">1 avis • il y a 1 mois</div>
+              </footer>
+            </div>
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-amber-500/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+          </article>
+
+          <!-- Review 6 -->
+          <article class="card-interactive flex-shrink-0 w-full sm:w-96 p-6 hover-lift magnetic perspective-reveal group" data-review="6" data-magnetic-strength="0.1" data-lift-distance="8">
+            <div class="relative">
+              <div class="flex items-center gap-1 mb-4" role="img" aria-label="5 étoiles sur 5">
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <blockquote class="text-pearl-600 dark:text-pearl-400 leading-relaxed mb-4 text-base relative z-10">
+                "Première consultation pour ma fille (acné) : Dr Oumakhir a été d'une douceur incroyable, a su la mettre à l'aise et lui expliquer les choses simplement. Traitement efficace, peau nette en 3 mois."
+              </blockquote>
+              <footer class="relative z-10">
+                <div class="font-medium text-pearl-950 dark:text-white">Amina R.</div>
+                <div class="text-sm text-pearl-500 dark:text-pearl-400">3 avis • il y a 4 mois</div>
+              </footer>
+            </div>
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-med-500/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <div class="flex justify-center gap-4 mt-12">
+        <button id="prev-review" class="p-4 rounded-full glass-strong text-pearl-600 dark:text-pearl-400 hover:text-pearl-950 dark:hover:text-white hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] transition-all duration-300 magnetic hover-lift" data-magnetic-strength="0.3" data-lift-distance="4" aria-label="Avis précédent">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <div class="flex items-center gap-3" id="review-dots" role="tablist" aria-label="Navigation des avis"></div>
+        <button id="next-review" class="p-4 rounded-full glass-strong text-pearl-600 dark:text-pearl-400 hover:text-pearl-950 dark:hover:text-white hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] transition-all duration-300 magnetic hover-lift" data-magnetic-strength="0.3" data-lift-distance="4" aria-label="Avis suivant">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Link to Google Reviews -->
+      <div class="text-center mt-12 reveal up stagger-4 duration-normal ease-spring">
+        <a href="https://www.google.com/maps/place/Cabinet+de+Dermatologie+Dr+Siham+OUMAKHIR/@31.6295,-7.9811,17z/data=!4m8!3m7!1s0xda7e0a7c8b8b8b8b:0x8b8b8b8b8b8b8b8b!8m2!3d31.6295!4d-7.9811!9m1!1b1!16s%2Fg%2F11b8b8b8b8?entry=ttu" target="_blank" rel="noopener noreferrer" class="btn-secondary inline-flex items-center gap-2 magnetic hover-lift ripple" data-magnetic-strength="0.2" data-lift-distance="6" aria-label="Voir tous les avis sur Google Maps">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          Voir les 165 avis sur Google Maps
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating geometric shapes -->
+  <div class="absolute top-20 left-4 w-16 h-16 border-2 border-cyan-500/30 dark:border-cyan-400/30 rounded-2xl rotate-12 float-slow opacity-50 hidden lg:block" aria-hidden="true"></div>
+  <div class="absolute top-40 right-4 w-12 h-12 bg-gradient-to-br from-violet-500/20 to-rose-500/20 rounded-full float-fast hidden lg:block" aria-hidden="true" style="animation-delay: 1s"></div>
+  <div class="absolute bottom-20 left-8 w-10 h-10 border-2 border-med-500/30 dark:border-med-400/30 rounded-lg rotate-45 float-slow opacity-50 hidden lg:block" aria-hidden="true" style="animation-delay: 2s"></div>
+  <div class="absolute bottom-40 right-8 w-8 h-8 bg-rose-500/20 rounded-full float-fast hidden lg:block" aria-hidden="true" style="animation-delay: 1.5s"></div>
+</section>
+
+<script is:inline>
+  // Advanced Reviews Carousel with GSAP
+  const track = document.getElementById('reviews-track');
+  const prevBtn = document.getElementById('prev-review');
+  const nextBtn = document.getElementById('next-review');
+  const dotsContainer = document.getElementById('review-dots');
+
+  if (track && prevBtn && nextBtn && dotsContainer) {
+    const cards = track.querySelectorAll('[data-review]');
+    const cardWidth = 384 + 24; // sm:w-96 = 384px + gap-6 = 24px
+    let currentIndex = 0;
+    const maxIndex = cards.length - 1;
+    let isAnimating = false;
+
+    // Create dots
+    cards.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === 0 ? 'bg-cyan-500 scale-125' : 'bg-pearl-300 dark:bg-pearl-600'}`;
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label', `Aller à l'avis ${i + 1}`);
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll('button');
+
+    function updateCarousel() {
+      if (typeof window !== 'undefined' && window.gsap) {
+        const gsap = window.gsap;
+
+        // Animate track
+        gsap.to(track, {
+          x: -currentIndex * cardWidth,
+          duration: 0.8,
+          ease: 'expo.out',
+          onComplete: () => { isAnimating = false; }
+        });
+
+        // Animate cards
+        cards.forEach((card, i) => {
+          const isActive = i === currentIndex;
+          gsap.to(card, {
+            scale: isActive ? 1.02 : 1,
+            zIndex: isActive ? 10 : 1,
+            duration: 0.5,
+            ease: 'expo.out'
+          });
+        });
+      } else {
+        track.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+      }
+
+      // Update dots
+      dots.forEach((dot, i) => {
+        const isActive = i === currentIndex;
+        dot.classList.toggle('bg-cyan-500', isActive);
+        dot.classList.toggle('scale-125', isActive);
+        dot.classList.toggle('bg-pearl-300', !isActive);
+        dot.classList.toggle('dark:bg-pearl-600', !isActive);
+      });
+
+      // Update buttons
+      prevBtn.disabled = currentIndex === 0 || isAnimating;
+      nextBtn.disabled = currentIndex === maxIndex || isAnimating;
+      prevBtn.classList.toggle('opacity-40', currentIndex === 0);
+      nextBtn.classList.toggle('opacity-40', currentIndex === maxIndex);
+      prevBtn.classList.toggle('pointer-events-none', currentIndex === 0);
+      nextBtn.classList.toggle('pointer-events-none', currentIndex === maxIndex);
+    }
+
+    function goToSlide(index) {
+      if (isAnimating) return;
+      isAnimating = true;
+      currentIndex = Math.max(0, Math.min(index, maxIndex));
+      updateCarousel();
+    }
+
+    prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+    // Keyboard navigation
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
+      if (e.key === 'ArrowRight') goToSlide(currentIndex + 1);
+    });
+
+    // Touch swipe support
+    let touchStartX = 0;
+    track.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].clientX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        goToSlide(currentIndex + (diff > 0 ? 1 : -1));
+      }
+    }, { passive: true });
+
+    // Auto-play
+    let autoPlayInterval: number;
+    function startAutoPlay() {
+      autoPlayInterval = window.setInterval(() => {
+        if (!isAnimating) {
+          goToSlide(currentIndex === maxIndex ? 0 : currentIndex + 1);
+        }
+      }, 5000);
+    }
+    function stopAutoPlay() {
+      clearInterval(autoPlayInterval);
+    }
+
+    track.addEventListener('mouseenter', stopAutoPlay);
+    track.addEventListener('mouseleave', startAutoPlay);
+    track.addEventListener('touchstart', stopAutoPlay, { passive: true });
+
+    startAutoPlay();
+    updateCarousel();
+  }
+</script>

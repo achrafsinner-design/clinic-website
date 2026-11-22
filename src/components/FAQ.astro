@@ -1,0 +1,363 @@
+---
+interface Props {}
+---
+
+<section id="faq" class="py-20 lg:py-32 relative overflow-hidden" aria-labelledby="faq-title">
+  <!-- Aurora glow -->
+  <div class="absolute inset-0 -z-10 aurora-bg opacity-60" aria-hidden="true"></div>
+
+  <!-- Noise texture -->
+  <div class="absolute inset-0 -z-10 noise opacity-[0.015]" aria-hidden="true"></div>
+
+  <div class="section-container relative z-10">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal up stagger-1 duration-normal ease-spring">
+      <span class="section-label magnetic" data-magnetic-strength="0.1">Questions Fréquentes</span>
+      <h2 id="faq-title" class="section-title font-display reveal-text">
+        Réponses à vos
+        <br class="hidden sm:block" />
+        <span class="text-gradient">questions</span>
+      </h2>
+      <p class="section-subtitle mx-auto">
+        Tout ce qu'il faut savoir avant votre consultation. Besoin d'une info précise ? Contactez-nous directement.
+      </p>
+    </div>
+
+    <!-- FAQ Accordion with 3D Cards -->
+    <div class="max-w-4xl mx-auto space-y-4 reveal up stagger-2 duration-slow ease-spring">
+      <!-- FAQ 1 -->
+      <div class="card-interactive overflow-hidden group hover-lift magnetic perspective-reveal" data-faq="1" data-magnetic-strength="0.1" data-lift-distance="4">
+        <dt>
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset magnetic" data-magnetic-strength="0.15" aria-expanded="false" aria-controls="faq-1-content">
+            <span class="text-lg font-semibold text-pearl-950 dark:text-white pr-4 font-display">Comment prendre rendez-vous ?</span>
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-aria-expanded:rotate-180" aria-hidden="true">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </button>
+        </dt>
+        <dd id="faq-1-content" class="faq-content hidden px-6 pb-6 text-pearl-600 dark:text-pearl-400 leading-relaxed" role="region" aria-labelledby="faq-1-trigger">
+          <div class="space-y-3">
+            <p>Vous pouvez prendre rendez-vous de 3 façons simples :</p>
+            <ul class="list-disc list-inside space-y-2 pl-4">
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-med-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> <strong>Par téléphone :</strong> 07 62 36 73 37 (du lundi au samedi aux horaires d'ouverture)</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> <strong>Par WhatsApp :</strong> Cliquez sur le bouton "Rendez-vous" pour discuter directement</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> <strong>Via le formulaire :</strong> Remplissez le formulaire de contact, nous vous rappelons sous 24h</li>
+            </ul>
+            <p class="pt-2">Nous vous confirmerons le créneau et vous indiquerons les documents à apporter (carte d'identité, carte CNSS/Mutuelle, anciens comptes-rendus).</p>
+          </div>
+        </dd>
+        <!-- Accent line -->
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-violet-500 to-rose-500 scale-x-0 group-aria-expanded:scale-x-100 transition-transform duration-500 ease-spring origin-left" aria-hidden="true"></div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="card-interactive overflow-hidden group hover-lift magnetic perspective-reveal" data-faq="2" data-magnetic-strength="0.1" data-lift-distance="4" style="animation-delay: 0.05s">
+        <dt>
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset magnetic" data-magnetic-strength="0.15" aria-expanded="false" aria-controls="faq-2-content">
+            <span class="text-lg font-semibold text-pearl-950 dark:text-white pr-4 font-display">La consultation est-elle remboursée ?</span>
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-aria-expanded:rotate-180" aria-hidden="true">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </button>
+        </dt>
+        <dd id="faq-2-content" class="faq-content hidden px-6 pb-6 text-pearl-600 dark:text-pearl-400 leading-relaxed" role="region" aria-labelledby="faq-2-trigger">
+          <div class="space-y-4">
+            <div class="p-4 bg-med-50 dark:bg-med-900/30 rounded-2xl border border-med-200/50 dark:border-med-800/50">
+              <p class="font-semibold text-med-700 dark:text-med-300 mb-2">Dermatologie médicale :</p>
+              <p>Oui, la consultation est remboursée par la CNSS et la plupart des mutuelles sur la base du tarif de convention. Apportez votre carte CNSS et votre carte de mutuelle.</p>
+            </div>
+            <div class="p-4 bg-rose-50 dark:bg-rose-900/30 rounded-2xl border border-rose-200/50 dark:border-rose-800/50">
+              <p class="font-semibold text-rose-700 dark:text-rose-300 mb-2">Médecine esthétique :</p>
+              <p>Non remboursée (actes de confort). Un devis détaillé vous sera remis avant tout traitement.</p>
+            </div>
+            <div class="p-4 bg-teal-50 dark:bg-teal-900/30 rounded-2xl border border-teal-200/50 dark:border-teal-800/50">
+              <p class="font-semibold text-teal-700 dark:text-teal-300 mb-2">Laser médical (cicatrices, pathologies) :</p>
+              <p>Peut être partiellement pris en charge selon l'indication médicale. Renseignez-vous auprès de votre mutuelle.</p>
+            </div>
+          </div>
+        </dd>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 via-cyan-500 to-med-500 scale-x-0 group-aria-expanded:scale-x-100 transition-transform duration-500 ease-spring origin-left" aria-hidden="true"></div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="card-interactive overflow-hidden group hover-lift magnetic perspective-reveal" data-faq="3" data-magnetic-strength="0.1" data-lift-distance="4" style="animation-delay: 0.1s">
+        <dt>
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset magnetic" data-magnetic-strength="0.15" aria-expanded="false" aria-controls="faq-3-content">
+            <span class="text-lg font-semibold text-pearl-950 dark:text-white pr-4 font-display">Quels documents apporter à la 1ère consultation ?</span>
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-500 to-rose-600 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-aria-expanded:rotate-180" aria-hidden="true">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </button>
+        </dt>
+        <dd id="faq-3-content" class="faq-content hidden px-6 pb-6 text-pearl-600 dark:text-pearl-400 leading-relaxed" role="region" aria-labelledby="faq-3-trigger">
+          <ul class="space-y-2 pl-4">
+            <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-lg bg-med-100 dark:bg-med-900/50 flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-med-600 dark:text-med-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div> Pièce d'identité (CIN ou passeport)</li>
+            <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-lg bg-teal-100 dark:bg-teal-900/50 flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div> Carte CNSS / carte de mutuelle</li>
+            <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-lg bg-rose-100 dark:bg-rose-900/50 flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-rose-600 dark:text-rose-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div> Anciens comptes-rendus médicaux, analyses, biopsies</li>
+            <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-lg bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div> Liste de vos traitements en cours</li>
+            <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-lg bg-cyan-100 dark:bg-cyan-900/50 flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div> Photos de l'évolution de votre problème (si applicable)</li>
+            <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-violet-600 dark:text-violet-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div> Votre routine cosmétique actuelle (produits utilisés)</li>
+          </ul>
+        </dd>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-500 via-rose-600 to-amber-500 scale-x-0 group-aria-expanded:scale-x-100 transition-transform duration-500 ease-spring origin-left" aria-hidden="true"></div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="card-interactive overflow-hidden group hover-lift magnetic perspective-reveal" data-faq="4" data-magnetic-strength="0.1" data-lift-distance="4" style="animation-delay: 0.15s">
+        <dt>
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset magnetic" data-magnetic-strength="0.15" aria-expanded="false" aria-controls="faq-4-content">
+            <span class="text-lg font-semibold text-pearl-950 dark:text-white pr-4 font-display">Les traitements laser sont-ils douloureux ?</span>
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-aria-expanded:rotate-180" aria-hidden="true">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </button>
+        </dt>
+        <dd id="faq-4-content" class="faq-content hidden px-6 pb-6 text-pearl-600 dark:text-pearl-400 leading-relaxed" role="region" aria-labelledby="faq-4-trigger">
+          <div class="space-y-3">
+            <p>La plupart des traitements laser sont bien tolérés. La sensation varie selon le type de laser et la zone traitée :</p>
+            <ul class="space-y-3 pl-4">
+              <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-lg bg-rose-100 dark:bg-rose-900/50 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3.5 h-3.5 text-rose-600 dark:text-rose-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div><div><strong>Épilation laser :</strong> Sensation d'élastique qui claque, atténuée par le système de refroidissement intégré</div></li>
+              <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-lg bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div><div><strong>Laser vasculaire/pigmentaire :</strong> Légère chaleur, supportable sans anesthésie</div></li>
+              <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-lg bg-red-100 dark:bg-red-900/50 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3.5 h-3.5 text-red-600 dark:text-red-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div><div><strong>Laser fractionné CO2 :</strong> Crème anesthésiante appliquée 45 min avant la séance</div></li>
+            </ul>
+            <p class="pt-2">Nous adaptons toujours la puissance à votre confort. Dites-le si c'est trop intense !</p>
+          </div>
+        </dd>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 scale-x-0 group-aria-expanded:scale-x-100 transition-transform duration-500 ease-spring origin-left" aria-hidden="true"></div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="card-interactive overflow-hidden group hover-lift magnetic perspective-reveal" data-faq="5" data-magnetic-strength="0.1" data-lift-distance="4" style="animation-delay: 0.2s">
+        <dt>
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset magnetic" data-magnetic-strength="0.15" aria-expanded="false" aria-controls="faq-5-content">
+            <span class="text-lg font-semibold text-pearl-950 dark:text-white pr-4 font-display">Combien de séances pour l'épilation laser ?</span>
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-aria-expanded:rotate-180" aria-hidden="true">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </button>
+        </dt>
+        <dd id="faq-5-content" class="faq-content hidden px-6 pb-6 text-pearl-600 dark:text-pearl-400 leading-relaxed" role="region" aria-labelledby="faq-5-trigger">
+          <div class="space-y-3">
+            <p class="text-center py-4 bg-gradient-to-r from-cyan-500/10 to-teal-500/10 rounded-2xl border border-cyan-200/50 dark:border-cyan-800/50">
+              <span class="text-3xl font-bold font-mono text-cyan-600 dark:text-cyan-400">6 à 8</span> séances en moyenne
+            </p>
+            <p>Espacées de 4 à 8 semaines selon la zone et votre pilosité.</p>
+            <div class="p-4 bg-pearl-50 dark:bg-pearl-900/50 rounded-2xl border border-pearl-200/50 dark:border-pearl-700/50">
+              <p class="font-semibold text-pearl-950 dark:text-white mb-2">Facteurs influençant le nombre :</p>
+              <ul class="list-disc list-inside space-y-1 text-sm">
+                <li>Couleur de peau</li>
+                <li>Épaisseur du poil</li>
+                <li>Zone hormonale (visage)</li>
+                <li>Régularité des séances</li>
+              </ul>
+            </div>
+            <p class="pt-2">Un entretien annuel (1-2 séances) peut être nécessaire pour maintenir le résultat. La première consultation permet d'établir un protocole personnalisé et un devis.</p>
+          </div>
+        </dd>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-teal-500 to-med-500 scale-x-0 group-aria-expanded:scale-x-100 transition-transform duration-500 ease-spring origin-left" aria-hidden="true"></div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="card-interactive overflow-hidden group hover-lift magnetic perspective-reveal" data-faq="6" data-magnetic-strength="0.1" data-lift-distance="4" style="animation-delay: 0.25s">
+        <dt>
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset magnetic" data-magnetic-strength="0.15" aria-expanded="false" aria-controls="faq-6-content">
+            <span class="text-lg font-semibold text-pearl-950 dark:text-white pr-4 font-display">Y a-t-il des effets secondaires aux injections ?</span>
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-aria-expanded:rotate-180" aria-hidden="true">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </button>
+        </dt>
+        <dd id="faq-6-content" class="faq-content hidden px-6 pb-6 text-pearl-600 dark:text-pearl-400 leading-relaxed" role="region" aria-labelledby="faq-6-trigger">
+          <div class="space-y-3">
+            <p>Les effets secondaires sont généralement <strong>légers et transitoires</strong> :</p>
+            <ul class="space-y-2 pl-4">
+              <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-lg bg-rose-100 dark:bg-rose-900/50 flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-rose-600 dark:text-rose-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div> Petits bleus ou rougeurs aux points d'injection (disparaissent en quelques jours)</li>
+              <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-lg bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div> Léger gonflement (quelques heures à 48h)</li>
+              <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-lg bg-teal-100 dark:bg-teal-900/50 flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div> Sensation de tension temporaire</li>
+            </ul>
+            <div class="p-4 bg-violet-50 dark:bg-violet-900/30 rounded-2xl border border-violet-200/50 dark:border-violet-800/50 pt-2">
+              <p class="text-sm"><strong>Complications rares</strong> (infection, asymétrie, nécrose) : <strong>quasi nulles</strong> entre les mains d'un dermatologue expérimenté respectant les règles d'asepsie et d'anatomie. Nous utilisons uniquement des produits certifiés (Allergan, Galderma, Merz, Teoxane...).</p>
+            </div>
+          </div>
+        </dd>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-violet-500 via-purple-500 to-rose-500 scale-x-0 group-aria-expanded:scale-x-100 transition-transform duration-500 ease-spring origin-left" aria-hidden="true"></div>
+      </div>
+
+      <!-- FAQ 7 -->
+      <div class="card-interactive overflow-hidden group hover-lift magnetic perspective-reveal" data-faq="7" data-magnetic-strength="0.1" data-lift-distance="4" style="animation-delay: 0.3s">
+        <dt>
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset magnetic" data-magnetic-strength="0.15" aria-expanded="false" aria-controls="faq-7-content">
+            <span class="text-lg font-semibold text-pearl-950 dark:text-white pr-4 font-display">Peut-on faire des traitements esthétiques l'été ?</span>
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-500 to-amber-500 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-aria-expanded:rotate-180" aria-hidden="true">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </button>
+        </dt>
+        <dd id="faq-7-content" class="faq-content hidden px-6 pb-6 text-pearl-600 dark:text-pearl-400 leading-relaxed" role="region" aria-labelledby="faq-7-trigger">
+          <div class="space-y-3">
+            <p class="font-semibold"><strong>Oui, mais avec précautions :</strong></p>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="p-4 bg-green-50 dark:bg-green-900/30 rounded-2xl border border-green-200/50 dark:border-green-800/50">
+                <p class="font-semibold text-green-700 dark:text-green-300 mb-2 flex items-center gap-2"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Autorisés</p>
+                <ul class="list-disc list-inside space-y-1 text-sm">
+                  <li>Toxine botulique</li>
+                  <li>Skinboosters, PRP</li>
+                  <li>Fils tenseurs</li>
+                  <li>Hydrafacial</li>
+                  <li>Radiofréquence, HIFU</li>
+                </ul>
+              </div>
+              <div class="p-4 bg-red-50 dark:bg-red-900/30 rounded-2xl border border-red-200/50 dark:border-red-800/50">
+                <p class="font-semibold text-red-700 dark:text-red-300 mb-2 flex items-center gap-2"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg> À éviter / Reporter</p>
+                <ul class="list-disc list-inside space-y-1 text-sm">
+                  <li>Lasers ablatifs/fractionnés</li>
+                  <li>Peelings moyens/profonds</li>
+                  <li>Laser pigmentaire</li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-4 bg-yellow-50 dark:bg-yellow-900/30 rounded-2xl border border-yellow-200/50 dark:border-yellow-800/50">
+              <p class="font-semibold text-yellow-700 dark:text-yellow-300 mb-2 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg> Impératif</p>
+              <p class="text-sm">Protection solaire SPF50+ stricte 1 mois avant et après tout traitement</p>
+            </div>
+            <p class="pt-2">Nous adaptons le protocole selon la saison et votre phototype. L'été est idéal pour l'entretien (skinboosters, toxine) et la préparation de l'automne (lasers).</p>
+          </div>
+        </dd>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 scale-x-0 group-aria-expanded:scale-x-100 transition-transform duration-500 ease-spring origin-left" aria-hidden="true"></div>
+      </div>
+
+      <!-- FAQ 8 -->
+      <div class="card-interactive overflow-hidden group hover-lift magnetic perspective-reveal" data-faq="8" data-magnetic-strength="0.1" data-lift-distance="4" style="animation-delay: 0.35s">
+        <dt>
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset magnetic" data-magnetic-strength="0.15" aria-expanded="false" aria-controls="faq-8-content">
+            <span class="text-lg font-semibold text-pearl-950 dark:text-white pr-4 font-display">Comment se passe le suivi post-traitement ?</span>
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-med-500 to-teal-500 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-aria-expanded:rotate-180" aria-hidden="true">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </button>
+        </dt>
+        <dd id="faq-8-content" class="faq-content hidden px-6 pb-6 text-pearl-600 dark:text-pearl-400 leading-relaxed" role="region" aria-labelledby="faq-8-trigger">
+          <div class="space-y-3">
+            <p>Chaque traitement inclut un <strong>protocole de suivi personnalisé</strong> :</p>
+            <ul class="space-y-2 pl-4">
+              <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-lg bg-med-100 dark:bg-med-900/50 flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-med-600 dark:text-med-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div> Ordonnance crèmes cicatrisantes/protectrices si nécessaire</li>
+              <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-lg bg-teal-100 dark:bg-teal-900/50 flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div> Conseils dermocosmétiques adaptés (routine matin/soir)</li>
+              <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-lg bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div> Protection solaire obligatoire (produits recommandés disponibles au cabinet)</li>
+              <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-lg bg-cyan-100 dark:bg-cyan-900/50 flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div> Rendez-vous de contrôle selon le traitement (J+7, J+15, M+1, M+3...)</li>
+            </ul>
+            <div class="p-4 bg-gradient-to-r from-med-500/10 to-teal-500/10 rounded-2xl border border-med-200/50 dark:border-med-800/50 pt-2">
+              <p class="text-sm"><strong>Disponibilité :</strong> Pour toute question ou inquiétude post-traitement, contactez-nous par WhatsApp ou téléphone. Nous répondons rapidement, même le week-end pour les urgences.</p>
+            </div>
+          </div>
+        </dd>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-med-500 via-teal-500 to-cyan-500 scale-x-0 group-aria-expanded:scale-x-100 transition-transform duration-500 ease-spring origin-left" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-16 reveal up stagger-3 duration-normal ease-spring">
+      <p class="text-pearl-600 dark:text-pearl-400 mb-4">Une question qui n'est pas dans la liste ?</p>
+      <a href="#contact" class="btn-primary inline-flex magnetic ripple hover-lift" data-magnetic-strength="0.2" data-lift-distance="6">Nous contacter</a>
+    </div>
+  </div>
+
+  <!-- Floating geometric shapes -->
+  <div class="absolute top-20 left-4 w-16 h-16 border-2 border-cyan-500/30 dark:border-cyan-400/30 rounded-2xl rotate-12 float-slow opacity-50 hidden lg:block" aria-hidden="true"></div>
+  <div class="absolute top-40 right-4 w-12 h-12 bg-gradient-to-br from-violet-500/20 to-rose-500/20 rounded-full float-fast hidden lg:block" aria-hidden="true" style="animation-delay: 1s"></div>
+  <div class="absolute bottom-20 left-8 w-10 h-10 border-2 border-med-500/30 dark:border-med-400/30 rounded-lg rotate-45 float-slow opacity-50 hidden lg:block" aria-hidden="true" style="animation-delay: 2s"></div>
+  <div class="absolute bottom-40 right-8 w-8 h-8 bg-rose-500/20 rounded-full float-fast hidden lg:block" aria-hidden="true" style="animation-delay: 1.5s"></div>
+</section>
+
+<script is:inline>
+  // FAQ Accordion with GSAP animations
+  document.querySelectorAll('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const faqItem = trigger.closest('[data-faq]');
+      const content = faqItem?.querySelector('.faq-content');
+      const icon = trigger.querySelector('svg');
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+      if (!content || !icon) return;
+
+      // Close all other FAQ items
+      document.querySelectorAll('.faq-trigger').forEach(otherTrigger => {
+        if (otherTrigger !== trigger) {
+          otherTrigger.setAttribute('aria-expanded', 'false');
+          const otherContent = otherTrigger.closest('[data-faq]')?.querySelector('.faq-content');
+          const otherIcon = otherTrigger.querySelector('svg');
+          const otherItem = otherTrigger.closest('[data-faq]');
+          const otherAccent = otherItem?.querySelector('[aria-hidden="true"].absolute');
+
+          if (otherContent) {
+            if (typeof window !== 'undefined' && window.gsap) {
+              const gsap = window.gsap;
+              gsap.to(otherContent, {
+                height: 0,
+                opacity: 0,
+                duration: 0.4,
+                ease: 'expo.inOut',
+                onComplete: () => otherContent.classList.add('hidden')
+              });
+            } else {
+              otherContent.classList.add('hidden');
+            }
+          }
+          otherIcon?.classList.remove('rotate-180');
+          if (otherAccent) otherAccent.classList.remove('group-aria-expanded:scale-x-100');
+        }
+      });
+
+      // Toggle current
+      trigger.setAttribute('aria-expanded', (!isExpanded).toString());
+      icon.classList.toggle('rotate-180', !isExpanded);
+
+      if (!isExpanded) {
+        content.classList.remove('hidden');
+        if (typeof window !== 'undefined' && window.gsap) {
+          const gsap = window.gsap;
+          gsap.fromTo(content,
+            { height: 0, opacity: 0 },
+            { height: 'auto', opacity: 1, duration: 0.6, ease: 'expo.out' }
+          );
+        }
+      } else {
+        if (typeof window !== 'undefined' && window.gsap) {
+          const gsap = window.gsap;
+          gsap.to(content, {
+            height: 0,
+            opacity: 0,
+            duration: 0.4,
+            ease: 'expo.inOut',
+            onComplete: () => content.classList.add('hidden')
+          });
+        } else {
+          content.classList.add('hidden');
+        }
+      }
+    });
+
+    // Keyboard support
+    trigger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        trigger.click();
+      }
+    });
+  });
+</script>
